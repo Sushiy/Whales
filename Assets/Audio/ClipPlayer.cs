@@ -9,6 +9,8 @@ public class ClipPlayer : MonoBehaviour {
 
     [SerializeField]
     private AudioClip[] whale1;
+    [SerializeField]
+    private AudioClip[] surface;
 
     private AudioSource audio_;
 
@@ -31,11 +33,19 @@ public class ClipPlayer : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Alpha1))
             PlayWhale1();
-	}
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            PlaySurface();
+    }
 
-    void PlayWhale1()
+    public void PlayWhale1()
     {
         int randomIndex = Random.Range(0, whale1.Length);
         audio_.PlayOneShot(whale1[randomIndex]);
+    }
+
+    public void PlaySurface()
+    {
+        int randomIndex = Random.Range(0, surface.Length);
+        audio_.PlayOneShot(surface[randomIndex], 0.3f);
     }
 }
