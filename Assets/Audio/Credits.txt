@@ -2,3 +2,9 @@ Whale sounds http://www.whalesynth.com/
 Ambiance1 https://freesound.org/people/akemov/sounds/255597/
 Water Surface https://freesound.org/people/Robinhood76/sounds/320185/
 ice crack 1 https://freesound.org/people/timbreknight/sounds/342546/
+thump1 https://freesound.org/people/bareform/sounds/218717/
+thump2 https://freesound.org/people/BristolStories/sounds/46136/
+thump3 https://freesound.org/people/ZurfR/sounds/400584/
+thump4 https://freesound.org/people/vacuumfan7072/sounds/349033/
+crash1 https://freesound.org/people/InspectorJ/sounds/352513/
+crash2 https://freesound.org/people/CGEffex/sounds/99960/

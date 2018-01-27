@@ -11,6 +11,10 @@ public class ClipPlayer : MonoBehaviour {
     private AudioClip[] whale1;
     [SerializeField]
     private AudioClip[] surface;
+    [SerializeField]
+    private AudioClip[] thump;
+    [SerializeField]
+    private AudioClip[] crash;
 
     private AudioSource audio_;
 
@@ -29,14 +33,6 @@ public class ClipPlayer : MonoBehaviour {
         audio_ = GetComponent<AudioSource>();
     }
 
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            PlayWhale1();
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-            PlaySurface();
-    }
-
     public void PlayWhale1()
     {
         int randomIndex = Random.Range(0, whale1.Length);
@@ -47,5 +43,27 @@ public class ClipPlayer : MonoBehaviour {
     {
         int randomIndex = Random.Range(0, surface.Length);
         audio_.PlayOneShot(surface[randomIndex], 0.3f);
+    }
+
+    public void PlayThump(int index)
+    {
+        audio_.PlayOneShot(thump[index]);
+    }
+
+    public void PlayCrash(int index)
+    {
+        audio_.PlayOneShot(crash[index],0.3f);
+    }
+
+    public void PlaySurfaceThroughIce(int index)
+    {
+        PlayCrash(index);
+        StartCoroutine(SurfaceDelay(1.5f));
+    }
+
+    IEnumerator SurfaceDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        PlaySurface();
     }
 }

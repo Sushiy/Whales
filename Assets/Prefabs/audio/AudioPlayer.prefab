@@ -406,6 +406,11 @@ MonoBehaviour:
   surface:
   - {fileID: 8300000, guid: bd9973caceac878418557d7c8057f304, type: 3}
   - {fileID: 8300000, guid: ef821c110d2f1394d9795a7ed3d3b31c, type: 3}
+  thump:
+  - {fileID: 8300000, guid: 2d22d3a33d6ef584ea6e7140a63c55af, type: 3}
+  - {fileID: 8300000, guid: 8f55c2c6e09b1e4499468a79b6622047, type: 3}
+  - {fileID: 8300000, guid: 197088488bf26d84d913ffeb1fbc00cb, type: 3}
+  - {fileID: 8300000, guid: 2b2ba16fc037f4b4e9022cc3447b28f3, type: 3}
 --- !u!114 &114831535046329662
 MonoBehaviour:
   m_ObjectHideFlags: 1
