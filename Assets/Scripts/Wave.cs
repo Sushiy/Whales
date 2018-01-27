@@ -12,6 +12,7 @@ public class Wave : MonoBehaviour {
 
     bool stillSpreading;
 
+
     private void Awake()
     {
 
@@ -34,8 +35,16 @@ public class Wave : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+
+        if(!stillSpreading)
+        {
+
+            InputObserver.instance.setB1True();
+            Destroy(this.gameObject);
+        }
+       
+    }
 
     IEnumerator SpreadWave()
     {
@@ -50,7 +59,9 @@ public class Wave : MonoBehaviour {
                 if (transform.localScale.x > maxRadius)
                 {
                     stillSpreading = false;
-                    Destroy(this.gameObject);
+                    
+                   
+                    
                 }
 
                 yield return new WaitForSeconds(spreadSpeed*0.01f);
