@@ -19,10 +19,15 @@ public class BigBlueGuides : MonoBehaviour
         worldPosition = new ReactiveProperty<Vector2>();
 
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void Start()
     {
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+
         worldPosition.Value = new Vector2(transform.position.x, transform.position.y);
 	}
 
