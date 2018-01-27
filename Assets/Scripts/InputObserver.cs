@@ -9,7 +9,7 @@ public class InputObserver : MonoBehaviour {
     public static InputObserver instance;
 
     //Velocity Counter: Pressing the Velocity Button 
-
+    
 
     // Use this for initialization
     void Start () {
