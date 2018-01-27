@@ -7,6 +7,7 @@ using UniRx;
 public class InputObserver : MonoBehaviour {
 
     public static InputObserver instance;
+    public GameObject wave;
 
     //Velocity Counter: Pressing the Velocity Button 
     
@@ -17,7 +18,9 @@ public class InputObserver : MonoBehaviour {
 
         //InputManager.instance.button1.Where(var => var == true).TakeLast(1).Subscribe(val => Debug.Log("Button 1 changed to " + val));
 
-        InputManager.instance.button1.Subscribe(val => Debug.Log("Button 1 changed to " + val));
+        // A Bubble-Prefab gets created on this point 
+        InputManager.instance.button1.Subscribe(val => //Debug.Log("Button 1 changed to " + val)
+                                                Instantiate(wave, PlayerMovement.instance.transform.GetChild(0).transform.position, Quaternion.identity)   );
 
         InputManager.instance.button2.Subscribe(val => Debug.Log("Button 2 changed to " + val));
 
