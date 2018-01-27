@@ -6,7 +6,7 @@ using UniRx;
 public class BigBlueController : MonoBehaviour
 {
     public static BigBlueController instance;
-    List<BigBlueGuides> guides;
+    List<MP_Guides> guides;
 
     public ReactiveProperty<Vector2> guidanceDirection;
     public ReactiveProperty<float> guidanceSpeed;
@@ -23,10 +23,10 @@ public class BigBlueController : MonoBehaviour
 	// Use this for initialization
 	void Start()
     {
-        guides = BigBlueGuides.instances;
+        guides = MP_Guides.instances;
         List<IObservable<Vector2>> guides_Position = new List<IObservable<Vector2>>();
         //Fill a List with all available Guides
-        foreach(BigBlueGuides guide in guides)
+        foreach(MP_Guides guide in guides)
         {
             guides_Position.Add(guide.worldPosition);
         }

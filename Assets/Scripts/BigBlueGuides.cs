@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-public class BigBlueGuides : MonoBehaviour
+public class MP_Guides : MonoBehaviour
 {
-    public static List<BigBlueGuides> instances;
+    public static List<MP_Guides> instances;
 
     public ReactiveProperty<Vector2> worldPosition;
 
@@ -13,7 +13,7 @@ public class BigBlueGuides : MonoBehaviour
 	void Awake ()
     {
         if (instances == null)
-            instances = new List<BigBlueGuides>();
+            instances = new List<MP_Guides>();
         instances.Add(this);
 
         worldPosition = new ReactiveProperty<Vector2>();
