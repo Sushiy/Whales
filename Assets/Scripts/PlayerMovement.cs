@@ -15,10 +15,6 @@ public class PlayerMovement : MonoBehaviour {
     public float paddleInterval = 2.0f;
     public bool hasPaddled = false;
 
-    public float flipperInterval = 1.0f;
-    bool hasFlippered = false;
-
-
     Vector2 curDirection;
     Vector2 movement;
 
@@ -47,7 +43,6 @@ public class PlayerMovement : MonoBehaviour {
         velocity = 1.0f;
 
         StartCoroutine(PaddleDelay());
-        StartCoroutine(FlipperDelay());
 
     }
 
@@ -67,7 +62,6 @@ public class PlayerMovement : MonoBehaviour {
 
 
             movement = new Vector3(dir.x, dir.y).normalized;
-            //rigid.AddForce(transform.right * dir.magnitude * paddleForce, ForceMode2D.Impulse);
 
 
         });
@@ -75,32 +69,26 @@ public class PlayerMovement : MonoBehaviour {
 	}
     private void Update()
     {
-        if (movement.magnitude > 0.0f && !hasPaddled)
-        {
-            rigid.AddForce(transform.right * movement.magnitude * paddleForce, ForceMode2D.Impulse);
-            hasPaddled = true;
-        }
-        //Debug.DrawRay(rigid.transform.position, transform.right, Color.red);
         Debug.DrawRay(rigid.transform.position, movement, Color.yellow);
     }
     // Update is called once per frame
     void FixedUpdate ()
     {
 
+        if (movement.magnitude > 0.0f && !hasPaddled)
+        {
+            rigid.AddForce(transform.right * movement.magnitude * paddleForce, ForceMode2D.Impulse);
+            hasPaddled = true;
+        }
+
         //Slowly align to the desired directionvector
         Vector2 separatingVector =  movement - (Vector2)transform.right;
         Vector2 projectedSepVector = Vector3.Project(separatingVector, transform.up);
         rigid.AddForceAtPosition(projectedSepVector.normalized * turningForce * Time.fixedDeltaTime, (Vector3)rigid.position + transform.right * 1.8f, ForceMode2D.Force);
-        //rigid.angularVelocity *= 0.98f;
-        //
+
         Debug.DrawRay(rigid.transform.position, projectedSepVector * turningForce, Color.red);
         Debug.DrawRay(rigid.transform.position, separatingVector, Color.blue);
         Debug.DrawRay(rigid.transform.position, movement, Color.yellow);
-        /*if (!hasFlippered)
-        {
-            rigid.AddForceAtPosition(-projectedSepVector * turningForce, (Vector3)rigid.position + transform.right * 1.8f, ForceMode2D.Impulse);
-            hasFlippered = true;
-        }*/
 
         rigid.angularVelocity = Mathf.Clamp(rigid.angularVelocity, -maxDegreePerSecond, maxDegreePerSecond);
     }
@@ -118,22 +106,6 @@ public class PlayerMovement : MonoBehaviour {
 
             yield return null;
             
-        }
-    }
-
-    IEnumerator FlipperDelay()
-    {
-        while (true)
-        {
-
-            if (hasFlippered)
-            {
-                yield return new WaitForSeconds(flipperInterval);
-                hasFlippered = false;
-            }
-
-            yield return null;
-
         }
     }
 
