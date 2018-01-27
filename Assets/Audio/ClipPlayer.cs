@@ -23,6 +23,10 @@ public class ClipPlayer : MonoBehaviour {
     private AudioClip bubbles;
     [SerializeField]
     private AudioClip[] hit;
+    [SerializeField]
+    private AudioClip[] lampfish;
+    [SerializeField]
+    private AudioClip underwater_explosion;
 
     private AudioSource audio_;
 
@@ -101,5 +105,16 @@ public class ClipPlayer : MonoBehaviour {
     public void PlayBubbles()
     {
         audio_.PlayOneShot(bubbles);
+    }
+
+    public void PlayLampfish()
+    {
+        int randomIndex = Random.Range(0, lampfish.Length);
+        audio_.PlayOneShot(lampfish[randomIndex]);
+    }
+
+    public void PlayUnderwaterExplosion()
+    {
+        audio_.PlayOneShot(underwater_explosion);
     }
 }
