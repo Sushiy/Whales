@@ -440,4 +440,7 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 8ef2a4ddb9418d44cb69e9bef900c253, type: 3}
   - {fileID: 8300000, guid: 6d0d7ec965a9dda46a24d15c37dd8dd4, type: 3}
+  - {fileID: 8300000, guid: 61eddc6aa98dff24eb72a17feb628aca, type: 3}
+  - {fileID: 8300000, guid: 941b0f875578cd5498e67e3b788d01bd, type: 3}
+  - {fileID: 8300000, guid: 555469e0b110d164d90d4674d4699a4b, type: 3}
   minMaxDuration: {x: 10, y: 30}
