@@ -15,6 +15,8 @@ public class ClipPlayer : MonoBehaviour {
     private AudioClip[] thump;
     [SerializeField]
     private AudioClip[] crash;
+    [SerializeField]
+    private AudioClip[] ice_thru;
 
     private AudioSource audio_;
 
@@ -50,20 +52,32 @@ public class ClipPlayer : MonoBehaviour {
         audio_.PlayOneShot(thump[index]);
     }
 
-    public void PlayCrash(int index)
+    public void PlayCrash(int index, float vol)
     {
-        audio_.PlayOneShot(crash[index],0.3f);
+        audio_.PlayOneShot(crash[index],vol);
     }
 
     public void PlaySurfaceThroughIce(int index)
     {
-        PlayCrash(index);
+        PlayCrash(index, 0.3f);
         StartCoroutine(SurfaceDelay(1.5f));
+    }
+
+    public void PlaySurfaceThroughIce2()
+    {
+        PlayCrash(3, 1f);
+        PlaySurface();
     }
 
     IEnumerator SurfaceDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         PlaySurface();
+    }
+
+    public void PlayIceThrough()
+    {
+        int randomIndex = Random.Range(0, ice_thru.Length);
+        audio_.PlayOneShot(ice_thru[randomIndex]);
     }
 }

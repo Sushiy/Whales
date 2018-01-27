@@ -411,6 +411,16 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8f55c2c6e09b1e4499468a79b6622047, type: 3}
   - {fileID: 8300000, guid: 197088488bf26d84d913ffeb1fbc00cb, type: 3}
   - {fileID: 8300000, guid: 2b2ba16fc037f4b4e9022cc3447b28f3, type: 3}
+  crash:
+  - {fileID: 8300000, guid: 2012ff44adb06c949b153d943085348a, type: 3}
+  - {fileID: 8300000, guid: 1ad374348790cd04d9563c6955e84f12, type: 3}
+  - {fileID: 8300000, guid: bfe0bc0e8c8540f4a9f0adc4bab0d4e7, type: 3}
+  - {fileID: 8300000, guid: 523520c37398db04493cfec9844e3014, type: 3}
+  ice_thru:
+  - {fileID: 8300000, guid: 44ffe14f5665ef743a94b47e35e6e817, type: 3}
+  - {fileID: 8300000, guid: 6252a380c9f8c5440af5e7e532ff2c71, type: 3}
+  - {fileID: 8300000, guid: ebe50edda29cc6348af84ca6fde936eb, type: 3}
+  - {fileID: 8300000, guid: 3344fd51c3d554645bc807fe7cdf82f4, type: 3}
 --- !u!114 &114831535046329662
 MonoBehaviour:
   m_ObjectHideFlags: 1
