@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 940313310}
   - component: {fileID: 940313305}
   - component: {fileID: 940313311}
+  - component: {fileID: 940313312}
   m_Layer: 0
   m_Name: BigBlue
   m_TagString: Untagged
@@ -330,7 +331,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c45068c375d5f2349a5f741585923e3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.84, y: 3.84}
@@ -365,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredDirection: {x: 0, y: 0}
   maxVelocity: 5
-  paddlingInterval: 2
+  paddlingInterval: 2.5
   paddlingForce: 1
   turningForce: 20
 --- !u!50 &940313309
@@ -435,12 +436,29 @@ MonoBehaviour:
   m_SendInterval: 0.09090909
   m_SyncRotationAxis: 3
   m_RotationSyncCompression: 0
-  m_SyncSpin: 0
+  m_SyncSpin: 1
   m_MovementTheshold: 0.001
   m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
+  m_SnapThreshold: 10
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!95 &940313312
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 940313304}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e7ce536cd2bfc94199eda7bd2e59bc8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1141295423
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +587,7 @@ MonoBehaviour:
     m_MinNetSimulatorTimeout: 1
     m_MaxNetSimulatorTimeout: 12000
   m_Channels: 
-  m_UseWebSockets: 1
+  m_UseWebSockets: 0
   m_UseSimulator: 0
   m_SimulatedLatency: 1
   m_PacketLossPercentage: 0

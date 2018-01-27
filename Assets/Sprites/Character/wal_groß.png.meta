@@ -1,0 +1,867 @@
+fileFormatVersion: 2
+guid: c9140745040ff2647a92a744a67e022e
+timeCreated: 1517084699
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "wal_gro\xDF_0"
+    21300002: "wal_gro\xDF_1"
+    21300004: "wal_gro\xDF_2"
+    21300006: "wal_gro\xDF_3"
+    21300008: "wal_gro\xDF_4"
+    21300010: "wal_gro\xDF_5"
+    21300012: "wal_gro\xDF_6"
+    21300014: "wal_gro\xDF_7"
+    21300016: "wal_gro\xDF_8"
+    21300018: "wal_gro\xDF_9"
+    21300020: "wal_gro\xDF_10"
+    21300022: "wal_gro\xDF_11"
+    21300024: "wal_gro\xDF_12"
+    21300026: "wal_gro\xDF_13"
+    21300028: "wal_gro\xDF_14"
+    21300030: "wal_gro\xDF_15"
+    21300032: "wal_gro\xDF_16"
+    21300034: "wal_gro\xDF_17"
+    21300036: "wal_gro\xDF_18"
+    21300038: "wal_gro\xDF_19"
+    21300040: "wal_gro\xDF_20"
+    21300042: "wal_gro\xDF_21"
+    21300044: "wal_gro\xDF_22"
+    21300046: "wal_gro\xDF_23"
+    21300048: "wal_gro\xDF_24"
+    21300050: "wal_gro\xDF_25"
+    21300052: "wal_gro\xDF_26"
+    21300054: "wal_gro\xDF_27"
+    21300056: "wal_gro\xDF_28"
+    21300058: "wal_gro\xDF_29"
+    21300060: "wal_gro\xDF_30"
+    21300062: "wal_gro\xDF_31"
+    21300064: "wal_gro\xDF_32"
+    21300066: "wal_gro\xDF_33"
+    21300068: "wal_gro\xDF_34"
+    21300070: "wal_gro\xDF_35"
+    21300072: "wal_gro\xDF_36"
+    21300074: "wal_gro\xDF_37"
+    21300076: "wal_gro\xDF_38"
+    21300078: "wal_gro\xDF_39"
+    21300080: "wal_gro\xDF_40"
+    21300082: "wal_gro\xDF_41"
+    21300084: "wal_gro\xDF_42"
+    21300086: "wal_gro\xDF_43"
+    21300088: "wal_gro\xDF_44"
+    21300090: "wal_gro\xDF_45"
+    21300092: "wal_gro\xDF_46"
+    21300094: "wal_gro\xDF_47"
+    21300096: "wal_gro\xDF_48"
+    21300098: "wal_gro\xDF_49"
+    21300100: "wal_gro\xDF_50"
+    21300102: "wal_gro\xDF_51"
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "wal_gro\xDF_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3648
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_1"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3648
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_2"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3648
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_3"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3648
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_4"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3344
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_5"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3344
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_6"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3344
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_7"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3344
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_8"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3040
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_9"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3040
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_10"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3040
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_11"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3040
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_12"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2736
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_13"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2736
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_14"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2736
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_15"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2736
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_16"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2432
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_17"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2432
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_18"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2432
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_19"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2432
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_20"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2128
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_21"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2128
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_22"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2128
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_23"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2128
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_24"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1824
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_25"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1824
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_26"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1824
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_27"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1824
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_28"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1520
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_29"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1520
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_30"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1520
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_31"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1520
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_32"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_33"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1216
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_34"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1216
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_35"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1216
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_36"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 912
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_37"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 912
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_38"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 912
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_39"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 912
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_40"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_41"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 608
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_42"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 608
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_43"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 608
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_44"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_45"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 304
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_46"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 304
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_47"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 304
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_48"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_49"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_50"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "wal_gro\xDF_51"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

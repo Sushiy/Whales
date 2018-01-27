@@ -29,7 +29,7 @@ public class MP_BigBlueView : NetworkBehaviour
     {
         model = GetComponent<MP_BigBlueController>();
         model.guidanceDirection.Subscribe(dir => { desiredDirection = dir; });
-        model.guidanceSpeed.Subscribe(spd => { speed = spd; Debug.Log("Speed:" + speed); });
+        model.guidanceSpeed.Subscribe(spd => { speed = spd;});
         StartCoroutine(Paddling());
     }
     void FixedUpdate()

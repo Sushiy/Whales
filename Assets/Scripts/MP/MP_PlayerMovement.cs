@@ -57,12 +57,12 @@ public class MP_PlayerMovement : NetworkBehaviour
 
         });
 
+        MP_BigBlueController.instance.AddGuide(this);
     }
 
     public override void OnStartLocalPlayer()
     {
         Camera.main.GetComponent<MP_CameraFollow>().SetTarget(this);
-        MP_BigBlueController.instance.AddGuide(this);
     }
 
     private void Update()
