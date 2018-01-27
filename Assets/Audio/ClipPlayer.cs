@@ -17,6 +17,12 @@ public class ClipPlayer : MonoBehaviour {
     private AudioClip[] crash;
     [SerializeField]
     private AudioClip[] ice_thru;
+    [SerializeField]
+    private AudioClip harpoon;
+    [SerializeField]
+    private AudioClip bubbles;
+    [SerializeField]
+    private AudioClip[] hit;
 
     private AudioSource audio_;
 
@@ -79,5 +85,21 @@ public class ClipPlayer : MonoBehaviour {
     {
         int randomIndex = Random.Range(0, ice_thru.Length);
         audio_.PlayOneShot(ice_thru[randomIndex]);
+    }
+
+    public void PlayHarpoon()
+    {
+        audio_.PlayOneShot(harpoon);
+    }
+
+    public void PlayHit()
+    {
+        int randomIndex = Random.Range(0, hit.Length);
+        audio_.PlayOneShot(hit[randomIndex]);
+    }
+
+    public void PlayBubbles()
+    {
+        audio_.PlayOneShot(bubbles);
     }
 }

@@ -8,3 +8,6 @@ thump3 https://freesound.org/people/ZurfR/sounds/400584/
 thump4 https://freesound.org/people/vacuumfan7072/sounds/349033/
 crash1 https://freesound.org/people/InspectorJ/sounds/352513/
 crash2 https://freesound.org/people/CGEffex/sounds/99960/
+bubbles https://freesound.org/people/Robinhood76/sounds/96742/
+harpoon https://freesound.org/people/Robinhood76/sounds/268561/
+knife stab https://freesound.org/people/Mixedupmoviestuff/sounds/179222/

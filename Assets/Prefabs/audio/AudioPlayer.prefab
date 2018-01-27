@@ -421,6 +421,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6252a380c9f8c5440af5e7e532ff2c71, type: 3}
   - {fileID: 8300000, guid: ebe50edda29cc6348af84ca6fde936eb, type: 3}
   - {fileID: 8300000, guid: 3344fd51c3d554645bc807fe7cdf82f4, type: 3}
+  harpoon: {fileID: 8300000, guid: e121e12f32007da47b266307d36e4878, type: 3}
+  bubbles: {fileID: 8300000, guid: 56dd25b442d0d484e8b135d0fe52cdd4, type: 3}
+  hit:
+  - {fileID: 8300000, guid: d513f035d692aab45938111d87b18ab2, type: 3}
+  - {fileID: 8300000, guid: 8502b881a23217b4b98f0e81bf132254, type: 3}
 --- !u!114 &114831535046329662
 MonoBehaviour:
   m_ObjectHideFlags: 1
