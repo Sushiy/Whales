@@ -34,6 +34,15 @@ public class MP_BigBlueView : NetworkBehaviour
     }
     void FixedUpdate()
     {
+
+        if (transform.position.y > 13.5f)
+        {
+            rigid.gravityScale = 0.5f;
+        }
+        else
+        {
+            rigid.gravityScale = 0.0f;
+        }
         Debug.DrawRay(transform.position, desiredDirection * speed, Color.green);
 
         if (Vector2.Angle(transform.right, Vector3.right) > 45)

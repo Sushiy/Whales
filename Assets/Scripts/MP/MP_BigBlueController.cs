@@ -4,10 +4,19 @@ using UnityEngine;
 using UniRx;
 using UnityEngine.Networking;
 
+public enum WhaleState
+{
+    FOLLOWING,
+    OUTOFOXYGEN,
+    BREATHING
+}
+
 public class MP_BigBlueController : NetworkBehaviour
 {
     public static MP_BigBlueController instance;
     List<MP_PlayerMovement> guides;
+
+    public WhaleState state = WhaleState.FOLLOWING;
 
     [HideInInspector]
     public ReactiveProperty<Vector2> guidanceDirection;
@@ -19,10 +28,12 @@ public class MP_BigBlueController : NetworkBehaviour
 
     public float guidanceRange = 3.0f;
 
+    MP_Oxygen oxygen;
+
     void Awake()
     {
         instance = this;
-
+        oxygen = GetComponent<MP_Oxygen>();
         guides = new List<MP_PlayerMovement>();
 
         guidanceDirection = new ReactiveProperty<Vector2>();
@@ -36,20 +47,33 @@ public class MP_BigBlueController : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (guides.Count > 0)
+        if(state == WhaleState.FOLLOWING)
         {
-            Vector2[] positions = new Vector2[guides.Count];
-            for(int i=0; i<guides.Count;i++)
+            if ((transform.position.y >= 11.0f && oxygen.oxygenLevel <= oxygen.maxOxygen - 30.0f * oxygen.oxygenConsumptionRate) || oxygen.needOxygen)
             {
-               positions[i] = guides[i].transform.position;
-                Debug.DrawLine(transform.position, guides[i].transform.position, Color.cyan);
+                state = WhaleState.OUTOFOXYGEN;
             }
-             
-            CalculateGuidanceDirection(positions);
+            else if (guides.Count > 0)
+            {
+                Vector2[] positions = new Vector2[guides.Count];
+                for (int i = 0; i < guides.Count; i++)
+                {
+                    positions[i] = guides[i].transform.position;
+                    Debug.DrawLine(transform.position, guides[i].transform.position, Color.cyan);
+                }
+
+                CalculateGuidanceDirection(positions);
+            }
         }
-        else
+            
+        else if(state ==WhaleState.OUTOFOXYGEN)
         {
-            Debug.DrawLine(transform.position, transform.position + new Vector3(2, 0, 0), Color.magenta);
+                guidanceDirection.Value = (new Vector3(transform.position.x + 3.0f, 14.0f, 0.0f) - transform.position).normalized;
+            if(transform.position.y >= 12.0f)
+            {
+                oxygen.Breathe();
+                state = WhaleState.FOLLOWING;
+            }
         }
     }
 

@@ -76,7 +76,14 @@ public class MP_PlayerMovement : NetworkBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        if (transform.position.y > 13.5f)
+        {
+            rigid.gravityScale = 0.5f;
+        }
+        else
+        {
+            rigid.gravityScale = 0.0f;
+        }
         if (movement.magnitude > 0.0f && !hasPaddled)
         {
             rigid.AddForce(transform.right * movement.magnitude * paddleForce, ForceMode2D.Impulse);
@@ -93,6 +100,8 @@ public class MP_PlayerMovement : NetworkBehaviour
         Debug.DrawRay(rigid.transform.position, movement, Color.yellow);
 
         rigid.angularVelocity = Mathf.Clamp(rigid.angularVelocity, -maxDegreePerSecond, maxDegreePerSecond);
+        rigid.velocity = Vector2.ClampMagnitude(rigid.velocity, 20.0f);
+
     }
 
     IEnumerator PaddleDelay()
