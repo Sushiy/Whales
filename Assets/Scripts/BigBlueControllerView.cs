@@ -5,7 +5,7 @@ using UniRx;
 
 public class BigBlueControllerView : MonoBehaviour
 {
-    Vector2 desiredDirection;
+    public Vector2 desiredDirection;
     float speed;
 
     public float maxVelocity = 10.0f;

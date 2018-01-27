@@ -8,26 +8,27 @@ public class PlayerMovement : MonoBehaviour {
 
     public static PlayerMovement instance;
 
-    public Vector2 currentPosition;
-    public Vector2 currentDirection;
+    Vector2 currentPosition;
+    Vector2 currentDirection;
 
-    public float velocity;
+    float velocity;
     public float paddleInterval = 2.0f;
     public bool hasPaddled = false;
 
     public float flipperInterval = 1.0f;
-    public bool hasFlippered = false;
+    bool hasFlippered = false;
 
 
-    public Vector2 curDirection;
-    public Vector2 movement;
+    Vector2 curDirection;
+    Vector2 movement;
 
     public float turningForce = 0.5f;
     public float paddleForce = 2.0f;
 
-    public Rigidbody2D rigid;
+    Rigidbody2D rigid;
 
-    public Vector3 currentAngle;
+    public float maxDegreePerSecond = 40.0f;
+    Vector3 currentAngle;
     Vector3 targetAngle;
 
     private void Awake()
@@ -101,7 +102,7 @@ public class PlayerMovement : MonoBehaviour {
             hasFlippered = true;
         }*/
 
-        rigid.angularVelocity = Mathf.Clamp(rigid.angularVelocity, -20.0f, 20.0f);
+        rigid.angularVelocity = Mathf.Clamp(rigid.angularVelocity, -maxDegreePerSecond, maxDegreePerSecond);
     }
 
     IEnumerator PaddleDelay()
