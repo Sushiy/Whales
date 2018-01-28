@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageType: 1
+  spawningLocation: {x: 0, y: 0}
 --- !u!212 &212528518870696326
 SpriteRenderer:
   m_ObjectHideFlags: 1
