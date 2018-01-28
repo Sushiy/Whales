@@ -54,7 +54,7 @@ public class MP_Oxygen : NetworkBehaviour
     {
         while(oxygenLevel <= 0)
         {
-            GetComponent<MP_Health>().TakeDamage();
+            GetComponent<MP_Health>().ServerTakeDamage();
             yield return new WaitForSeconds(drowningInterval);
         }
     }

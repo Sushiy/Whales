@@ -5,5 +5,5 @@ using UnityEngine;
 public interface IReceiver{
 
     // Use this for initialization
-    void receive(ISender sender, int message);
+    void receive(int message, Vector2 position);
 }

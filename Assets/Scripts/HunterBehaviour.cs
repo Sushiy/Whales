@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class HunterBehaviour : MonoBehaviour {
-
-
+public class HunterBehaviour : NetworkBehaviour
+{
     public Transform waterHole1;
     public Transform waterHole2;
-    public GameObject focusedTarget;
+    [SyncVar]
+    public Vector2 focusedTarget;
 
     public bool isTargetingLeftHole;
 
+    [SyncVar]
     public int currentState; // waiting left, waiting right, attentively, aiming, shooting, reloading
 
     public bool isAttacking;
@@ -19,6 +21,7 @@ public class HunterBehaviour : MonoBehaviour {
     public bool isAlarmed;
     public bool isWalking;
 
+    [SyncVar]
     public bool getsSignal;
 
 
@@ -30,11 +33,10 @@ public class HunterBehaviour : MonoBehaviour {
     void Awake()
     {
         //waterEntrance = new Vector2(waterHole1.transform.position.x, waterHole1.transform.position.y); 
+        if(isServer)
+            currentState = 1;
 
-        currentState = 0;
-        velocity = 0.05f;
-
-      
+        velocity = 0.05f;      
 
         isAlarmed = false;
         isWalking = false;
@@ -59,18 +61,13 @@ public class HunterBehaviour : MonoBehaviour {
         {
             isTargetingLeftHole = false;
         }
-            
-        // Debug.Log(getDistance() + "");
-
     }
 	
 	// Update is called once per frame
-	void Update () {
-
-
-        //Debug.Log(new Vector2(focusedTarget.transform.position.x - waterHole1.position.x, focusedTarget.transform.position.y - waterHole1.position.y).magnitude + "Distance to Hole1");
-        //Debug.Log(new Vector2(focusedTarget.transform.position.x - waterHole2.position.x, focusedTarget.transform.position.y - waterHole2.position.y).magnitude + "Distance to Hole2");
-
+	void Update ()
+    {
+        if (!isServer)
+            return;
         switch (currentState)
         {
             //alarmed
@@ -82,16 +79,16 @@ public class HunterBehaviour : MonoBehaviour {
                 if (getsSignal)
                 {
 
-                    if (new Vector2(focusedTarget.transform.position.x + waterHole1.position.x, focusedTarget.transform.position.y + waterHole1.position.y).magnitude <= new Vector2(focusedTarget.transform.position.x + waterHole2.position.x, focusedTarget.transform.position.y + waterHole2.position.y).magnitude)
+                    if (new Vector2(focusedTarget.x + waterHole1.position.x, focusedTarget.y + waterHole1.position.y).magnitude <= new Vector2(focusedTarget.x + waterHole2.position.x, focusedTarget.y + waterHole2.position.y).magnitude)
                     {
                         //linkes loch
                         if (isLeft)
                         {
                             isTargetingLeftHole = true;
 
-                            Debug.Log(new Vector2(focusedTarget.transform.position.x + transform.position.x, focusedTarget.transform.position.y + transform.position.y).magnitude);
+                            //Debug.Log(new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude);
                             // already left hole
-                            if (new Vector2(focusedTarget.transform.position.x + transform.position.x, focusedTarget.transform.position.y + transform.position.y).magnitude <= threshhold)
+                            if (new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude <= threshhold)
                             {
                                 currentState = 3;
                                 getsSignal = false;
@@ -110,9 +107,9 @@ public class HunterBehaviour : MonoBehaviour {
                         //linkes loch
                         if (isLeft)
                         {
-                            Debug.Log(new Vector2(focusedTarget.transform.position.x + transform.position.x, focusedTarget.transform.position.y + transform.position.y).magnitude);
+                            Debug.Log(new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude);
                             // he is left and needs to move right
-                            if (new Vector2(focusedTarget.transform.position.x + transform.position.x, focusedTarget.transform.position.y + transform.position.y).magnitude <= threshhold)
+                            if (new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude <= threshhold)
                             {
                                 currentState = 3;
                                 getsSignal = false;
@@ -120,7 +117,7 @@ public class HunterBehaviour : MonoBehaviour {
                         }
                         else
                         {
-                           
+
                             // already right hole
                             //moveLeft
                             currentState = 2;
@@ -128,8 +125,6 @@ public class HunterBehaviour : MonoBehaviour {
 
                         //rechtes loch
                     }
-                    // elseif target ist sehr nahe, dann 
-                    // currentState = 3;
 
                 }
 
@@ -159,8 +154,6 @@ public class HunterBehaviour : MonoBehaviour {
                 }
                 // spielgele hunter
                 // starte lauf animation
-                
-                //transform.position.x = waterHole1.position.x;
 
                 //wenn da stoppe die laufanimation
 
@@ -217,7 +210,6 @@ public class HunterBehaviour : MonoBehaviour {
 
         GetComponent<Animator>().SetTrigger(anima);
 
-
     }
 
     void enableCollider()
@@ -229,5 +221,18 @@ public class HunterBehaviour : MonoBehaviour {
     void disableCollider()
     {
         GetComponent<BoxCollider2D>().enabled = false;
+    }
+
+    [Command]
+    public void CmdChangeState(int newState)
+    {
+        currentState = newState;
+    }
+
+    [Command]
+    public void CmdSetFocus(Vector2 position)
+    {
+        focusedTarget = position;
+        getsSignal = true;
     }
 }

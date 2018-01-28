@@ -16,12 +16,23 @@ public class MP_Health : NetworkBehaviour
         health = maxHealth;
     }
 
-    public void TakeDamage()
+    [Command]
+    public void CmdTakeDamage()
     {
-        if(!isServer)
-            return;
         health--;
         if(health <= 0)
+        {
+            Debug.Log("You lose");
+
+            Application.Quit();
+        }
+
+    }
+
+    public void ServerTakeDamage()
+    {
+        health--;
+        if (health <= 0)
         {
             Debug.Log("You lose");
 
@@ -43,5 +54,17 @@ public class MP_Health : NetworkBehaviour
         yield return new WaitForSeconds(0.25f);
         rend.color = Color.white;
         yield return null;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isClient)
+        {
+            if (collision.gameObject.layer == 9)
+            {
+                CmdTakeDamage();
+            }
+        }
+
     }
 }
