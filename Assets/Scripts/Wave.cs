@@ -20,7 +20,6 @@ public class Wave : MonoBehaviour {
     Message waveMessage;
     public Vector2 spawningLocation;
 
-
     private void Awake()
     {
 
@@ -51,10 +50,6 @@ public class Wave : MonoBehaviour {
 
         if(!stillSpreading)
         {
-
-            InputObserver.instance.setB1True();
-            InputObserver.instance.setB2True();
-
             Destroy(this.gameObject);
         }
        

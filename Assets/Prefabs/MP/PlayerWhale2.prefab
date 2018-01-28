@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 95412543564713298}
   - component: {fileID: 70135929112882666}
   - component: {fileID: 114300357052577172}
+  - component: {fileID: 114976667639062176}
   m_Layer: 8
   m_Name: PlayerWhale2
   m_TagString: Untagged
@@ -259,6 +260,19 @@ MonoBehaviour:
   maxOxygen: 120
   drowningInterval: 3
   drowning: 0
+--- !u!114 &114976667639062176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1033047225153424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b471aa9ac7b2f4baade29456ca0b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wave: {fileID: 1514371024351766, guid: 948d12241b478ef4e93418a47f81d9d2, type: 2}
+  waveRed: {fileID: 1992835648372698, guid: 5829d34058d725c448af8ee9188bf22e, type: 2}
 --- !u!198 &198978625677108522
 ParticleSystem:
   m_ObjectHideFlags: 1
