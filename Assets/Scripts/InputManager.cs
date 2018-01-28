@@ -64,7 +64,8 @@ public class InputManager : MonoBehaviour {
             button2.Value = true;
         }
 
-        if (Input.GetAxis("1_Button3") >= 1.0f)
+        //if (Input.GetAxis("1_Button3") >= 1.0f)
+        if (Input.GetButtonDown("1_Button3"))
         {
             button3.Value = true;
         }
@@ -73,7 +74,6 @@ public class InputManager : MonoBehaviour {
         {
             button4.Value = true;
         }
-
         direction.Value = new Vector2(Input.GetAxis("1_Horizontal")  ,-Input.GetAxis("1_Vertical"));
     }
 
