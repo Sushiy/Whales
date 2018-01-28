@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wave: {fileID: 1514371024351766, guid: 948d12241b478ef4e93418a47f81d9d2, type: 2}
-  waveRed: {fileID: 1992835648372698, guid: 5829d34058d725c448af8ee9188bf22e, type: 2}
+  waveRed: {fileID: 1721704156022262, guid: 5829d34058d725c448af8ee9188bf22e, type: 2}
 --- !u!114 &114884024350199116
 MonoBehaviour:
   m_ObjectHideFlags: 1

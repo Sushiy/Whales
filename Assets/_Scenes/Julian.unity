@@ -815,6 +815,21 @@ Prefab:
       propertyPath: waterHole2
       value: 
       objectReference: {fileID: 1440519724}
+    - target: {fileID: 61453791647649708, guid: 7bef1cee8167fb74180af453e1ea4c73,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61453791647649708, guid: 7bef1cee8167fb74180af453e1ea4c73,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61453791647649708, guid: 7bef1cee8167fb74180af453e1ea4c73,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7bef1cee8167fb74180af453e1ea4c73, type: 2}
   m_IsPrefabParent: 0
