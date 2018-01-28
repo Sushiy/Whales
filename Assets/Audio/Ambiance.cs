@@ -11,6 +11,8 @@ public class Ambiance : MonoBehaviour {
     private Vector2 minMaxDuration = new Vector2(1f, 4f);
 
     private AudioSource _audio;
+    private float lastDuration = 0f;
+    int lastClip = 0;
 
     void Awake()
     {
@@ -26,8 +28,15 @@ public class Ambiance : MonoBehaviour {
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(minMaxDuration.x, minMaxDuration.y));
-            _audio.PlayOneShot(clips[Random.Range(0, clips.Length)], 0.5f);
+            yield return new WaitForSeconds(Random.Range(minMaxDuration.x, minMaxDuration.y) + lastDuration);
+            int index = Random.Range(0, clips.Length);
+            if (index == lastClip) index++;
+            index = index % clips.Length;
+            float vol = 0.5f;
+            if (index >= 2) vol = 0.3f;
+            AudioClip clip = clips[index];
+            _audio.PlayOneShot(clip, vol);
+            lastDuration = clip.length;
         }
     }
 }
