@@ -171,7 +171,7 @@ public class MP_BigBlueController : NetworkBehaviour
 
     public void GetSignal(Vector2 position)
     {
-        if(state == WhaleState.ALONE)
+        if(state == WhaleState.ALONE||state == WhaleState.SIGNALLED)
         {
             state = WhaleState.SIGNALLED;
             guidanceDirection.Value = (position - (Vector2)transform.position).normalized;
