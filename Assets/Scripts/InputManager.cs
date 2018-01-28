@@ -54,12 +54,12 @@ public class InputManager : MonoBehaviour {
         button3.Value = false;
         button4.Value = false;
 
-        if (Input.GetAxis("1_Button1") >=1.0f)
+        if (Input.GetButtonDown("1_Button1"))
         {
             button1.Value = true;
         }
 
-        if (Input.GetAxis("1_Button2") >= 1.0f)
+        if (Input.GetButtonDown("1_Button2"))
         {
             button2.Value = true;
         }

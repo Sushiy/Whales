@@ -105,11 +105,11 @@ public class PlayerButtonMovement : MonoBehaviour
         while (true)
         {
 
-            if (hasPaddled && InputObserver.instance.b3FakeCondition == false)
+            if (hasPaddled)
             {
                 yield return new WaitForSeconds(paddleInterval);
                 hasPaddled = false;
-                InputObserver.instance.b3FakeCondition = true;
+                //InputObserver.instance.b3FakeCondition = true;
             }
 
             yield return null;
