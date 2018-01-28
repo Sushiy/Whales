@@ -7,6 +7,7 @@ public class HunterBehaviour : NetworkBehaviour
 {
     public Transform waterHole1;
     public Transform waterHole2;
+    [SyncVar]
     public Vector2 focusedTarget;
 
     public bool isTargetingLeftHole;
@@ -20,6 +21,7 @@ public class HunterBehaviour : NetworkBehaviour
     public bool isAlarmed;
     public bool isWalking;
 
+    [SyncVar]
     public bool getsSignal;
 
 
@@ -225,5 +227,12 @@ public class HunterBehaviour : NetworkBehaviour
     public void CmdChangeState(int newState)
     {
         currentState = newState;
+    }
+
+    [Command]
+    public void CmdSetFocus(Vector2 position)
+    {
+        focusedTarget = position;
+        getsSignal = true;
     }
 }
