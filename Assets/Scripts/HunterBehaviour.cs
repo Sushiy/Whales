@@ -7,7 +7,7 @@ public class HunterBehaviour : NetworkBehaviour
 {
     public Transform waterHole1;
     public Transform waterHole2;
-    public GameObject focusedTarget;
+    public Vector2 focusedTarget;
 
     public bool isTargetingLeftHole;
 
@@ -77,16 +77,16 @@ public class HunterBehaviour : NetworkBehaviour
                 if (getsSignal)
                 {
 
-                    if (new Vector2(focusedTarget.transform.position.x + waterHole1.position.x, focusedTarget.transform.position.y + waterHole1.position.y).magnitude <= new Vector2(focusedTarget.transform.position.x + waterHole2.position.x, focusedTarget.transform.position.y + waterHole2.position.y).magnitude)
+                    if (new Vector2(focusedTarget.x + waterHole1.position.x, focusedTarget.y + waterHole1.position.y).magnitude <= new Vector2(focusedTarget.x + waterHole2.position.x, focusedTarget.y + waterHole2.position.y).magnitude)
                     {
                         //linkes loch
                         if (isLeft)
                         {
                             isTargetingLeftHole = true;
 
-                            Debug.Log(new Vector2(focusedTarget.transform.position.x + transform.position.x, focusedTarget.transform.position.y + transform.position.y).magnitude);
+                            //Debug.Log(new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude);
                             // already left hole
-                            if (new Vector2(focusedTarget.transform.position.x + transform.position.x, focusedTarget.transform.position.y + transform.position.y).magnitude <= threshhold)
+                            if (new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude <= threshhold)
                             {
                                 currentState = 3;
                                 getsSignal = false;
@@ -105,9 +105,9 @@ public class HunterBehaviour : NetworkBehaviour
                         //linkes loch
                         if (isLeft)
                         {
-                            Debug.Log(new Vector2(focusedTarget.transform.position.x + transform.position.x, focusedTarget.transform.position.y + transform.position.y).magnitude);
+                            Debug.Log(new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude);
                             // he is left and needs to move right
-                            if (new Vector2(focusedTarget.transform.position.x + transform.position.x, focusedTarget.transform.position.y + transform.position.y).magnitude <= threshhold)
+                            if (new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude <= threshhold)
                             {
                                 currentState = 3;
                                 getsSignal = false;
