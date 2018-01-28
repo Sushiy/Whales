@@ -438,6 +438,27 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 783594ae6325eed4282cfea29b5bdd4d, type: 3}
   - {fileID: 8300000, guid: 8c4750ab05d99974487a82f450b5d20f, type: 3}
   - {fileID: 8300000, guid: e35d3af092a43194db8a85da7da73eba, type: 3}
+  whale_alarm:
+  - {fileID: 8300000, guid: e65dffb40ec848f4696d86ffba0ce3e4, type: 3}
+  - {fileID: 8300000, guid: f6cbf83a03fd4c64b8b5d9e74cb1f908, type: 3}
+  - {fileID: 8300000, guid: ae609375f046b8544adf6558c3d597bd, type: 3}
+  - {fileID: 8300000, guid: 04d8b29f63fe3b14594b0e4cb82820a9, type: 3}
+  - {fileID: 8300000, guid: fe9b075b0c14abd41bd1aebda79301f8, type: 3}
+  - {fileID: 8300000, guid: 33f8e3e54334c0e4a96436315581cb6d, type: 3}
+  whale_comehere:
+  - {fileID: 8300000, guid: 8173f66b84407d243b082fd5a07691d7, type: 3}
+  - {fileID: 8300000, guid: 4727a4037e355e64fbb1a4cda8b7e05d, type: 3}
+  - {fileID: 8300000, guid: 8eec3f0188305414eb9baa951db4aa35, type: 3}
+  - {fileID: 8300000, guid: 4d2f6b0c45ebbbc4794da4dc3085e7f9, type: 3}
+  - {fileID: 8300000, guid: 2ac95e262157f3f428dc153b89c10ee2, type: 3}
+  - {fileID: 8300000, guid: 221fa7f086735004c8d8de95a30d563d, type: 3}
+  bigWhale:
+  - {fileID: 8300000, guid: 00b2dc8cb97a9c544bacb77fea4e6aa8, type: 3}
+  - {fileID: 8300000, guid: a34e88f448bb76448b34552e2ee0e318, type: 3}
+  - {fileID: 8300000, guid: bf67dc7710f820b45a02e524665dafc1, type: 3}
+  - {fileID: 8300000, guid: 4133aa5cd8c1d794d8e8b878585044be, type: 3}
+  - {fileID: 8300000, guid: bf2b37ba0f73db848a405984b91dc7d1, type: 3}
+  - {fileID: 8300000, guid: 6f5e9e9334fc72c43bfccf5972cb5e63, type: 3}
 --- !u!114 &114831535046329662
 MonoBehaviour:
   m_ObjectHideFlags: 1

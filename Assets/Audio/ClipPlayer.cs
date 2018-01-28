@@ -31,6 +31,12 @@ public class ClipPlayer : MonoBehaviour {
     private AudioClip spear_splash;
     [SerializeField]
     private AudioClip[] huyas;
+    [SerializeField]
+    private AudioClip[] whale_alarm;
+    [SerializeField]
+    private AudioClip[] whale_comehere;
+    [SerializeField]
+    private AudioClip[] bigWhale;
 
     private AudioSource audio_;
 
@@ -131,5 +137,23 @@ public class ClipPlayer : MonoBehaviour {
     {
         int randomIndex = Random.Range(0, huyas.Length);
         audio_.PlayOneShot(huyas[randomIndex]);
+    }
+
+    public void PlayWhale_alarm()
+    {
+        int randomIndex = Random.Range(0, whale_alarm.Length);
+        audio_.PlayOneShot(whale_alarm[randomIndex]);
+    }
+
+    public void PlayWhale_comehere()
+    {
+        int randomIndex = Random.Range(0, whale_comehere.Length);
+        audio_.PlayOneShot(whale_comehere[randomIndex]);
+    }
+
+    public void PlayBigWhale()
+    {
+        int randomIndex = Random.Range(0, bigWhale.Length);
+        audio_.PlayOneShot(bigWhale[randomIndex]);
     }
 }
