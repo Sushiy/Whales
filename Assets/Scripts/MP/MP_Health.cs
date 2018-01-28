@@ -64,7 +64,15 @@ public class MP_Health : NetworkBehaviour
             {
                 CmdTakeDamage();
             }
+
+            if (collision.otherCollider.gameObject.layer == 12)
+            {
+                Debug.Log("wtf");
+                Destroy(collision.otherCollider.gameObject);
+                NetworkServer.Destroy(collision.otherCollider.gameObject);
+            }
         }
+
 
     }
 }
