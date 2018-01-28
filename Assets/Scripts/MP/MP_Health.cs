@@ -16,12 +16,23 @@ public class MP_Health : NetworkBehaviour
         health = maxHealth;
     }
 
-    public void TakeDamage()
+    [Command]
+    public void CmdTakeDamage()
     {
-        if(!isServer)
-            return;
         health--;
         if(health <= 0)
+        {
+            Debug.Log("You lose");
+
+            Application.Quit();
+        }
+
+    }
+
+    public void ServerTakeDamage()
+    {
+        health--;
+        if (health <= 0)
         {
             Debug.Log("You lose");
 
@@ -47,9 +58,13 @@ public class MP_Health : NetworkBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == 9)
+        if (isClient)
         {
-            TakeDamage();
+            if (collision.gameObject.layer == 9)
+            {
+                CmdTakeDamage();
+            }
         }
+
     }
 }
