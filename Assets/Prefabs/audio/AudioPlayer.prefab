@@ -222,7 +222,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -426,6 +426,47 @@ MonoBehaviour:
   hit:
   - {fileID: 8300000, guid: d513f035d692aab45938111d87b18ab2, type: 3}
   - {fileID: 8300000, guid: 8502b881a23217b4b98f0e81bf132254, type: 3}
+  lampfish:
+  - {fileID: 8300000, guid: 4f9990a8c4569b944b02f227cbfbce79, type: 3}
+  - {fileID: 8300000, guid: 80335c9a2b910c643911cf36a329272b, type: 3}
+  - {fileID: 8300000, guid: e8dca743c51eaa64a992afd48179289c, type: 3}
+  - {fileID: 8300000, guid: d434c79c03d0e1a4b92dbdee3aa6c260, type: 3}
+  underwater_explosion: {fileID: 8300000, guid: 6cf6140c35542cc4e8d3c212a1a84a54,
+    type: 3}
+  spear_splash: {fileID: 8300000, guid: 1ed54ea6c802855439fcddfc0ac0b82a, type: 3}
+  huyas:
+  - {fileID: 8300000, guid: 783594ae6325eed4282cfea29b5bdd4d, type: 3}
+  - {fileID: 8300000, guid: 8c4750ab05d99974487a82f450b5d20f, type: 3}
+  - {fileID: 8300000, guid: e35d3af092a43194db8a85da7da73eba, type: 3}
+  whale_alarm:
+  - {fileID: 8300000, guid: e65dffb40ec848f4696d86ffba0ce3e4, type: 3}
+  - {fileID: 8300000, guid: f6cbf83a03fd4c64b8b5d9e74cb1f908, type: 3}
+  - {fileID: 8300000, guid: ae609375f046b8544adf6558c3d597bd, type: 3}
+  - {fileID: 8300000, guid: 04d8b29f63fe3b14594b0e4cb82820a9, type: 3}
+  - {fileID: 8300000, guid: fe9b075b0c14abd41bd1aebda79301f8, type: 3}
+  - {fileID: 8300000, guid: 33f8e3e54334c0e4a96436315581cb6d, type: 3}
+  whale_comehere:
+  - {fileID: 8300000, guid: 8173f66b84407d243b082fd5a07691d7, type: 3}
+  - {fileID: 8300000, guid: 4727a4037e355e64fbb1a4cda8b7e05d, type: 3}
+  - {fileID: 8300000, guid: 8eec3f0188305414eb9baa951db4aa35, type: 3}
+  - {fileID: 8300000, guid: 4d2f6b0c45ebbbc4794da4dc3085e7f9, type: 3}
+  - {fileID: 8300000, guid: 2ac95e262157f3f428dc153b89c10ee2, type: 3}
+  - {fileID: 8300000, guid: 221fa7f086735004c8d8de95a30d563d, type: 3}
+  bigWhale:
+  - {fileID: 8300000, guid: 00b2dc8cb97a9c544bacb77fea4e6aa8, type: 3}
+  - {fileID: 8300000, guid: a34e88f448bb76448b34552e2ee0e318, type: 3}
+  - {fileID: 8300000, guid: bf67dc7710f820b45a02e524665dafc1, type: 3}
+  - {fileID: 8300000, guid: 4133aa5cd8c1d794d8e8b878585044be, type: 3}
+  - {fileID: 8300000, guid: bf2b37ba0f73db848a405984b91dc7d1, type: 3}
+  - {fileID: 8300000, guid: 6f5e9e9334fc72c43bfccf5972cb5e63, type: 3}
+  swim:
+  - {fileID: 8300000, guid: c6778d101983d4640a9f1085032dc9a4, type: 3}
+  - {fileID: 8300000, guid: bc0761692e6c4cd4ea1f9b78d5582450, type: 3}
+  - {fileID: 8300000, guid: f1505d45eeccc3040a9f0b52b25aaff1, type: 3}
+  - {fileID: 8300000, guid: 4abaabf63ed8457489a8f3cc2d23c833, type: 3}
+  - {fileID: 8300000, guid: d0e06049bf8045a47a70e101122ab1ba, type: 3}
+  - {fileID: 8300000, guid: 07c08dcd694f0ae498302a9781332d9c, type: 3}
+  - {fileID: 8300000, guid: 710c044185bdf494494daeb8ce3531fe, type: 3}
 --- !u!114 &114831535046329662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -443,4 +484,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 61eddc6aa98dff24eb72a17feb628aca, type: 3}
   - {fileID: 8300000, guid: 941b0f875578cd5498e67e3b788d01bd, type: 3}
   - {fileID: 8300000, guid: 555469e0b110d164d90d4674d4699a4b, type: 3}
-  minMaxDuration: {x: 10, y: 30}
+  minMaxDuration: {x: 5, y: 15}
