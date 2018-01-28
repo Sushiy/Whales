@@ -1,19 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
+using UnityEngine.Networking;
 
-public class MP_Health : MonoBehaviour
+public class MP_Health : NetworkBehaviour
 {
+    [SyncVar(hook = "OnChangeHealth")]
+    public int health;
 
-	// Use this for initialization
-	void Start ()
+    int maxHealth = 5;
+
+    private void Awake()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        health = maxHealth;
+    }
+
+    public void TakeDamage()
     {
-		
-	}
+        if(!isServer)
+            return;
+        health--;
+        if(health <= 0)
+        {
+            Debug.Log("You lose");
+
+            Application.Quit();
+        }
+
+    }
+
+    public void OnChangeHealth(int currentHealth)
+    {
+        if(currentHealth < maxHealth)
+            StartCoroutine(HealthFlash());
+    }
+
+    IEnumerator HealthFlash()
+    {
+        SpriteRenderer rend = GetComponent<SpriteRenderer>();
+        rend.color = Color.red;
+        yield return new WaitForSeconds(0.25f);
+        rend.color = Color.white;
+        yield return null;
+    }
 }

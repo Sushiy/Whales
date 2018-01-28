@@ -406,6 +406,7 @@ GameObject:
   - component: {fileID: 940313311}
   - component: {fileID: 940313312}
   - component: {fileID: 940313313}
+  - component: {fileID: 940313314}
   m_Layer: 8
   m_Name: BigBlue
   m_TagString: Untagged
@@ -608,6 +609,20 @@ MonoBehaviour:
   oxygenLevel: 120
   oxygenConsumptionRate: 1
   maxOxygen: 200
+  drowningInterval: 3
+  drowning: 0
+--- !u!114 &940313314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 940313304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a58c5eef2445fad41907412adea620ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!1 &1141295423
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,7 +707,9 @@ MonoBehaviour:
   m_PlayerSpawnMethod: 1
   m_OfflineScene: 
   m_OnlineScene: Julian
-  m_SpawnPrefabs: []
+  m_SpawnPrefabs:
+  - {fileID: 1521451308398102, guid: 2de3bbf6a850c8d429e7de518f888733, type: 2}
+  - {fileID: 1033047225153424, guid: 81a0bd1ceb1d13643845017b2cc2b577, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -750,6 +767,8 @@ MonoBehaviour:
   matchMaker: {fileID: 0}
   player1: {fileID: 0}
   player2: {fileID: 0}
+  prefab1: {fileID: 1521451308398102, guid: 2de3bbf6a850c8d429e7de518f888733, type: 2}
+  prefab2: {fileID: 1033047225153424, guid: 81a0bd1ceb1d13643845017b2cc2b577, type: 2}
 --- !u!114 &1161502778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -886,7 +905,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1295680314}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.6, y: 0.79, z: -0.02}
+  m_LocalPosition: {x: 2.27, y: 0.42, z: -0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 940313307}
@@ -1006,7 +1025,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1625829347
+  randomSeed: -79952429
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -1566,7 +1585,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -3496,7 +3515,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 4294967039
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5

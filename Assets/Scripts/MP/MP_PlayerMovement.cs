@@ -28,6 +28,8 @@ public class MP_PlayerMovement : NetworkBehaviour
 
     public AnimationCurve paddleCurve;
 
+    MP_Oxygen oxygen;
+
     private void Awake()
     {
         instance = this;
@@ -36,7 +38,7 @@ public class MP_PlayerMovement : NetworkBehaviour
         velocity = 1.0f;
 
         StartCoroutine(PaddleDelay());
-
+        oxygen = GetComponent<MP_Oxygen>();
     }
 
     // Use this for initialization
@@ -50,11 +52,9 @@ public class MP_PlayerMovement : NetworkBehaviour
 
             //the velocity should depend on the length of the directions vector and the amplitude of swim buttons pressed.
             // swim button are kind of impulses coming to move the fins.
-
-
+            
             movement = new Vector3(dir.x, dir.y).normalized;
-
-
+            
         });
 
         MP_BigBlueController.instance.AddGuide(this);
@@ -70,15 +70,17 @@ public class MP_PlayerMovement : NetworkBehaviour
         if (!isLocalPlayer)
             return;
 
-
         Debug.DrawRay(rigid.transform.position, movement, Color.yellow);
     }
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!isLocalPlayer)
+            return;
         if (transform.position.y > 13.5f)
         {
             rigid.gravityScale = 0.5f;
+            oxygen.Breathe();
         }
         else
         {
