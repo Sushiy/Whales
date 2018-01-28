@@ -37,6 +37,8 @@ public class ClipPlayer : MonoBehaviour {
     private AudioClip[] whale_comehere;
     [SerializeField]
     private AudioClip[] bigWhale;
+    [SerializeField]
+    private AudioClip[] swim;
 
     private AudioSource audio_;
 
@@ -155,5 +157,11 @@ public class ClipPlayer : MonoBehaviour {
     {
         int randomIndex = Random.Range(0, bigWhale.Length);
         audio_.PlayOneShot(bigWhale[randomIndex]);
+    }
+
+    public void PlaySwim()
+    {
+        int randomIndex = Random.Range(0, swim.Length);
+        audio_.PlayOneShot(swim[randomIndex], 0.5f);
     }
 }
