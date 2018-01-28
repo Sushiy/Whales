@@ -8,9 +8,15 @@ public class InputObserver : MonoBehaviour {
 
     public static InputObserver instance;
     public GameObject wave;
+    public GameObject waveRed;
 
     float b1Cooldown;
+    //float b2Cooldown;
+
     public bool b1FakeCondition;
+    public bool b2FakeCondition;
+    public bool b3FakeCondition;
+    public bool b4FakeCondition;
 
     //Velocity Counter: Pressing the Velocity Button 
 
@@ -29,6 +35,10 @@ public class InputObserver : MonoBehaviour {
     void Start () {
 
         b1FakeCondition = true;
+        b2FakeCondition = true;
+        b3FakeCondition = true;
+
+
 
         InputManager.instance.direction.Subscribe(dir => ShowDirection(dir));
 
@@ -42,14 +52,28 @@ public class InputObserver : MonoBehaviour {
             {
                 Instantiate(wave, PlayerMovement.instance.transform.GetChild(0).transform.position, Quaternion.identity);
                 b1FakeCondition = false;
+                b2FakeCondition = false;
             }
         });
         
-        InputManager.instance.button2.Subscribe(val => Debug.Log("Button 2 changed to " + val));
+        InputManager.instance.button2.Subscribe(val =>
 
-        InputManager.instance.button3.Subscribe(val => Debug.Log("Button 3 changed to " + val));
+        { if (val == true && b2FakeCondition == true)
+            {
+                Instantiate(waveRed, PlayerMovement.instance.transform.GetChild(0).transform.position, Quaternion.identity);
+                b1FakeCondition = false;
+                b2FakeCondition = false;
+            }
+        });
 
-        InputManager.instance.button4.Subscribe(val => Debug.Log("Button 4 changed to " + val));
+        InputManager.instance.button3.Subscribe(val => {
+
+            if (val)
+                PlayerButtonMovement.instance.paddle();
+
+        });
+
+       // InputManager.instance.button4.Subscribe(val => Debug.Log("Button 4 changed to " + val));
     }
 	
 	// Update is called once per frame
@@ -67,4 +91,19 @@ public class InputObserver : MonoBehaviour {
     {
         b1FakeCondition = true;
     }
+
+    public void setB2True()
+    {
+        b2FakeCondition = true;
+    }
+    public void setB3True()
+    {
+        b3FakeCondition = true;
+    }
+    public void setB4True()
+    {
+        b4FakeCondition = true;
+    }
+
+
 }
