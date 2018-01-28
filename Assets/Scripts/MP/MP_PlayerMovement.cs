@@ -52,7 +52,7 @@ public class MP_PlayerMovement : NetworkBehaviour
 
             //the velocity should depend on the length of the directions vector and the amplitude of swim buttons pressed.
             // swim button are kind of impulses coming to move the fins.
-            
+            Debug.Log("boop");
             movement = new Vector3(dir.x, dir.y).normalized;
             
         });
@@ -67,8 +67,8 @@ public class MP_PlayerMovement : NetworkBehaviour
 
     private void Update()
     {
-        if (!isLocalPlayer)
-            return;
+        //if (!isLocalPlayer)
+          //  return;
 
         Debug.DrawRay(rigid.transform.position, movement, Color.yellow);
     }
