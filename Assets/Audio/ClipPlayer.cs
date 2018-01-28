@@ -23,6 +23,22 @@ public class ClipPlayer : MonoBehaviour {
     private AudioClip bubbles;
     [SerializeField]
     private AudioClip[] hit;
+    [SerializeField]
+    private AudioClip[] lampfish;
+    [SerializeField]
+    private AudioClip underwater_explosion;
+    [SerializeField]
+    private AudioClip spear_splash;
+    [SerializeField]
+    private AudioClip[] huyas;
+    [SerializeField]
+    private AudioClip[] whale_alarm;
+    [SerializeField]
+    private AudioClip[] whale_comehere;
+    [SerializeField]
+    private AudioClip[] bigWhale;
+    [SerializeField]
+    private AudioClip[] swim;
 
     private AudioSource audio_;
 
@@ -101,5 +117,51 @@ public class ClipPlayer : MonoBehaviour {
     public void PlayBubbles()
     {
         audio_.PlayOneShot(bubbles);
+    }
+
+    public void PlayLampfish()
+    {
+        int randomIndex = Random.Range(0, lampfish.Length);
+        audio_.PlayOneShot(lampfish[randomIndex]);
+    }
+
+    public void PlayUnderwaterExplosion()
+    {
+        audio_.PlayOneShot(underwater_explosion);
+    }
+
+    public void PlaySpearSplash()
+    {
+        audio_.PlayOneShot(spear_splash, 0.5f);
+    }
+
+    public void PlayHuyas()
+    {
+        int randomIndex = Random.Range(0, huyas.Length);
+        audio_.PlayOneShot(huyas[randomIndex]);
+    }
+
+    public void PlayWhale_alarm()
+    {
+        int randomIndex = Random.Range(0, whale_alarm.Length);
+        audio_.PlayOneShot(whale_alarm[randomIndex]);
+    }
+
+    public void PlayWhale_comehere()
+    {
+        int randomIndex = Random.Range(0, whale_comehere.Length);
+        audio_.PlayOneShot(whale_comehere[randomIndex]);
+    }
+
+    public void PlayBigWhale()
+    {
+        int randomIndex = Random.Range(0, bigWhale.Length);
+        audio_.PlayOneShot(bigWhale[randomIndex]);
+    }
+
+    public void PlaySwim()
+    {
+        int randomIndex = Random.Range(0, swim.Length);
+        audio_.PlayOneShot(swim[randomIndex], 0.5f);
     }
 }
