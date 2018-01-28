@@ -10,13 +10,9 @@ public class InputObserver : MonoBehaviour {
     public GameObject wave;
     public GameObject waveRed;
 
-    float b1Cooldown;
-    //float b2Cooldown;
-
-    public bool b1FakeCondition;
-    public bool b2FakeCondition;
-    public bool b3FakeCondition;
-    public bool b4FakeCondition;
+    bool b1FakeCondition;
+    bool b2FakeCondition;
+    
 
     //Velocity Counter: Pressing the Velocity Button 
 
@@ -36,8 +32,6 @@ public class InputObserver : MonoBehaviour {
 
         b1FakeCondition = true;
         b2FakeCondition = true;
-        b3FakeCondition = true;
-
 
 
         InputManager.instance.direction.Subscribe(dir => ShowDirection(dir));
@@ -98,11 +92,11 @@ public class InputObserver : MonoBehaviour {
     }
     public void setB3True()
     {
-        b3FakeCondition = true;
+       // b3FakeCondition = true;
     }
     public void setB4True()
     {
-        b4FakeCondition = true;
+        //b4FakeCondition = true;
     }
 
 

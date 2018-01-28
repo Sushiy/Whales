@@ -65,12 +65,12 @@ public class Wave : MonoBehaviour {
         if (type == 0)
         {
             waveMessage = Message.follow;
-            Debug.Log("Follow-Message");
+           
         }
         else if (type == 1)
         {
             waveMessage = Message.alarm;
-            Debug.Log("Alarm-Message");
+           
         }
 
 

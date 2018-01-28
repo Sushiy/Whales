@@ -31,7 +31,7 @@ public class HunterBehaviour : MonoBehaviour {
     {
         //waterEntrance = new Vector2(waterHole1.transform.position.x, waterHole1.transform.position.y); 
 
-        currentState = 0;
+        currentState = 1;
         velocity = 0.05f;
 
       
