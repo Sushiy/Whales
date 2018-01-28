@@ -1,46 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+
+public class Wave : NetworkBehaviour
+{
+
+    public enum Message { follow, alarm };
 
 
-public class Wave : MonoBehaviour {
-
-    enum Message { follow, alarm };
-
-
-    float currentRadius;
-    float maxRadius;
-    float spreadSpeed;
+    float currentRadius = 1.0f;
+    float maxRadius = 30.0f;
+    float spreadSpeed = 0.8f;
 
     bool stillSpreading;
 
-    public int messageType;
-
-
-    Message waveMessage;
+    public Message waveMessage;
     public Vector2 spawningLocation;
 
     private void Awake()
     {
-
-        currentRadius = 1.0f;
-        maxRadius = 30.0f;
-        spreadSpeed = 0.8f;
-
         stillSpreading = true;
 
         spawningLocation = new Vector2(transform.position.x, transform.position.y);
-
-        setWaveMessage(messageType);
 
     }
     
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 
         StartCoroutine(SpreadWave());
-
 
     }
 	
@@ -55,22 +46,6 @@ public class Wave : MonoBehaviour {
        
     }
 
-    void setWaveMessage(int type)
-    {
-        if (type == 0)
-        {
-            waveMessage = Message.follow;
-           
-        }
-        else if (type == 1)
-        {
-            waveMessage = Message.alarm;
-           
-        }
-
-
-    }
-
     IEnumerator SpreadWave()
     {
         while (true)
@@ -79,14 +54,12 @@ public class Wave : MonoBehaviour {
             if(stillSpreading)
             {
                 currentRadius += spreadSpeed;
-                transform.localScale = new Vector3(currentRadius, currentRadius, 0);
+                transform.GetChild(0).localScale = new Vector3(currentRadius, currentRadius, 0);
 
-                if (transform.localScale.x >= maxRadius)
+                if (transform.GetChild(0).localScale.x >= maxRadius)
                 {
                     stillSpreading = false;
-                    
-                   
-                    
+
                 }
 
                 yield return new WaitForSeconds(spreadSpeed*0.01f);
@@ -94,6 +67,18 @@ public class Wave : MonoBehaviour {
                 
                yield return null;
 
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!isClient)
+            return;
+        Debug.Log("I hit " + other.name);
+        IReceiver receiver = other.GetComponent<IReceiver>();
+        if(receiver != null)
+        {
+            receiver.receive((int)waveMessage, spawningLocation);
         }
     }
 }

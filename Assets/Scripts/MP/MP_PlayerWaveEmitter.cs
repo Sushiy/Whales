@@ -11,12 +11,13 @@ public class MP_PlayerWaveEmitter : NetworkBehaviour
     bool b1FakeCondition;
     bool b2FakeCondition;
 
-    float waveDelay = 3.0f;
+    float waveDelay = 2.0f;
     // Use this for initialization
     void Start ()
     {
-        if (isServer)
+        if (!isLocalPlayer ||!isClient)
             return;
+
         b1FakeCondition = true;
         b2FakeCondition = true;
 
@@ -24,10 +25,10 @@ public class MP_PlayerWaveEmitter : NetworkBehaviour
         // A Bubble-Prefab gets created on this point 
         InputManager.instance.button1.Subscribe(val =>
         {
-            Debug.Log("Waveblue");
+            //Debug.Log("Waveblue");
             if (val == true && b1FakeCondition == true)
             {
-                Debug.Log("Waveblue");
+                //Debug.Log("Waveblue");
                 CmdSpawnWave(false);
                 StartCoroutine(DelayWaves());
                 
@@ -38,7 +39,7 @@ public class MP_PlayerWaveEmitter : NetworkBehaviour
         {
             if (val == true && b2FakeCondition == true)
             {
-                Debug.Log("Wavered");
+                //Debug.Log("Wavered");
                 CmdSpawnWave(true);
                 StartCoroutine(DelayWaves());
             }
