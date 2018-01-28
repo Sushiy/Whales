@@ -66,7 +66,7 @@ public class HunterBehaviour : NetworkBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (!isServer)
+        if(!isClient)
             return;
         switch (currentState)
         {
@@ -79,48 +79,56 @@ public class HunterBehaviour : NetworkBehaviour
                 if (getsSignal)
                 {
 
-                    if (new Vector2(focusedTarget.x + waterHole1.position.x, focusedTarget.y + waterHole1.position.y).magnitude <= new Vector2(focusedTarget.x + waterHole2.position.x, focusedTarget.y + waterHole2.position.y).magnitude)
+                    if ((focusedTarget - (Vector2)waterHole1.position).magnitude >= (focusedTarget - (Vector2)waterHole2.position).magnitude)
                     {
                         //linkes loch
                         if (isLeft)
                         {
                             isTargetingLeftHole = true;
+                            Debug.Log("is that a whale on the left?");
 
-                            //Debug.Log(new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude);
+                            Debug.Log((focusedTarget - (Vector2)transform.position).magnitude);
                             // already left hole
-                            if (new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude <= threshhold)
+                            if ((focusedTarget - (Vector2)transform.position).magnitude <= threshhold)
                             {
-                                currentState = 3;
+                                Debug.Log("Huya!!");
+
+                                CmdChangeState(3);
                                 getsSignal = false;
                             }
+                            else
+                                Debug.Log("Too far away :(");
                         }
                         else
                         {
                             // he is right and needs to move left
+                            Debug.Log("need to go left!");
 
                             //moveLeft
-                            currentState = 1;
+                            CmdChangeState(1);
                         }
                     }
                     else
                     {
-                        //linkes loch
-                        if (isLeft)
+                        //rechtes loch
+                        if (!isLeft)
                         {
-                            Debug.Log(new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude);
+                            Debug.Log("is that a whale on the right?");
+
+                            //Debug.Log(new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude);
                             // he is left and needs to move right
                             if (new Vector2(focusedTarget.x + transform.position.x, focusedTarget.y + transform.position.y).magnitude <= threshhold)
                             {
-                                currentState = 3;
+                                CmdChangeState(3);
                                 getsSignal = false;
                             }
                         }
                         else
                         {
-
-                            // already right hole
-                            //moveLeft
-                            currentState = 2;
+                            Debug.Log("need to go right!");
+                            // already left hole
+                            //move right
+                            CmdChangeState(2);
                         }
 
                         //rechtes loch
@@ -150,7 +158,7 @@ public class HunterBehaviour : NetworkBehaviour
                 else
                 {
                     playAnimation("focused");
-                    currentState = 0;
+                    CmdChangeState(0);
                 }
                 // spielgele hunter
                 // starte lauf animation
@@ -178,7 +186,7 @@ public class HunterBehaviour : NetworkBehaviour
                 else
                 {
                     playAnimation("focused");
-                    currentState = 0;
+                    CmdChangeState(0);
                 }
                 //figur spiegelen?
                 
@@ -190,7 +198,7 @@ public class HunterBehaviour : NetworkBehaviour
             case 3:
                 playAnimation("Attack");
                 // Abspielen der Angriffsanimation Animation
-                currentState = 0;
+                CmdChangeState(0);
                 break;
 
             default: break;
