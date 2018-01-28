@@ -44,4 +44,12 @@ public class MP_Health : NetworkBehaviour
         rend.color = Color.white;
         yield return null;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 9)
+        {
+            TakeDamage();
+        }
+    }
 }

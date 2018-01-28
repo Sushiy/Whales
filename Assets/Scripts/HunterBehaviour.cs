@@ -31,8 +31,8 @@ public class HunterBehaviour : NetworkBehaviour
     void Awake()
     {
         //waterEntrance = new Vector2(waterHole1.transform.position.x, waterHole1.transform.position.y); 
-        if(!isServer)
-            CmdChangeState(0);
+        if(isServer)
+            currentState = 1;
 
         velocity = 0.05f;      
 
@@ -64,7 +64,7 @@ public class HunterBehaviour : NetworkBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (isServer)
+        if (!isServer)
             return;
         switch (currentState)
         {
@@ -88,7 +88,7 @@ public class HunterBehaviour : NetworkBehaviour
                             // already left hole
                             if (new Vector2(focusedTarget.transform.position.x + transform.position.x, focusedTarget.transform.position.y + transform.position.y).magnitude <= threshhold)
                             {
-                                CmdChangeState(3);
+                                currentState = 3;
                                 getsSignal = false;
                             }
                         }
@@ -97,7 +97,7 @@ public class HunterBehaviour : NetworkBehaviour
                             // he is right and needs to move left
 
                             //moveLeft
-                            CmdChangeState(1);
+                            currentState = 1;
                         }
                     }
                     else
@@ -109,7 +109,7 @@ public class HunterBehaviour : NetworkBehaviour
                             // he is left and needs to move right
                             if (new Vector2(focusedTarget.transform.position.x + transform.position.x, focusedTarget.transform.position.y + transform.position.y).magnitude <= threshhold)
                             {
-                                CmdChangeState(3);
+                                currentState = 3;
                                 getsSignal = false;
                             }
                         }
@@ -118,7 +118,7 @@ public class HunterBehaviour : NetworkBehaviour
 
                             // already right hole
                             //moveLeft
-                            CmdChangeState(2);
+                            currentState = 2;
                         }
 
                         //rechtes loch
@@ -148,7 +148,7 @@ public class HunterBehaviour : NetworkBehaviour
                 else
                 {
                     playAnimation("focused");
-                    CmdChangeState(0);
+                    currentState = 0;
                 }
                 // spielgele hunter
                 // starte lauf animation
@@ -176,7 +176,7 @@ public class HunterBehaviour : NetworkBehaviour
                 else
                 {
                     playAnimation("focused");
-                    CmdChangeState(0);
+                    currentState = 0;
                 }
                 //figur spiegelen?
                 
@@ -188,7 +188,7 @@ public class HunterBehaviour : NetworkBehaviour
             case 3:
                 playAnimation("Attack");
                 // Abspielen der Angriffsanimation Animation
-                CmdChangeState(0);
+                currentState = 0;
                 break;
 
             default: break;
