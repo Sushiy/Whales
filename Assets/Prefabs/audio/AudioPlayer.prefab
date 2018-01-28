@@ -433,6 +433,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d434c79c03d0e1a4b92dbdee3aa6c260, type: 3}
   underwater_explosion: {fileID: 8300000, guid: 6cf6140c35542cc4e8d3c212a1a84a54,
     type: 3}
+  spear_splash: {fileID: 8300000, guid: 1ed54ea6c802855439fcddfc0ac0b82a, type: 3}
+  huyas:
+  - {fileID: 8300000, guid: 783594ae6325eed4282cfea29b5bdd4d, type: 3}
+  - {fileID: 8300000, guid: 8c4750ab05d99974487a82f450b5d20f, type: 3}
+  - {fileID: 8300000, guid: e35d3af092a43194db8a85da7da73eba, type: 3}
 --- !u!114 &114831535046329662
 MonoBehaviour:
   m_ObjectHideFlags: 1
